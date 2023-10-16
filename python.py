@@ -20,20 +20,16 @@ recording_id = device.recording_start()
 print(f"Started recording with id {recording_id}")
 now = datetime.now()
 name = str(now)
-print(device.send_event(now))
+print(device.send_event(name))
 print(device.send_event("unix time", event_timestamp_unix_ns=time.time_ns()))
 
 now = datetime.now()
 name = str(now)
+time = name.split('.')
 name = name.split('.')[-1]
 with open('./'+name+'.txt','w') as f:
-    f.write(str(now))
+    f.write(str(time))
 f.close()
 os.system(command)
-
-
-
-recording_id = device.recording_start()
-print(f"Started recording with id {recording_id}")
 #time.sleep(5)
 device.recording_stop_and_save()
