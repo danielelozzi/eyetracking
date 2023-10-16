@@ -1,0 +1,27 @@
+import multiprocessing
+
+def processo1():
+    print("Inizio del processo 1")
+    # Inserisci qui il codice per il processo 1
+    print("Fine del processo 1")
+
+def processo2():
+    print("Inizio del processo 2")
+    # Inserisci qui il codice per il processo 2
+    print("Fine del processo 2")
+
+if __name__ == "__main__":
+    # Crea due processi
+    p1 = multiprocessing.Process(target=processo1)
+    p2 = multiprocessing.Process(target=processo2)
+
+    # Avvia i due processi
+    p1.start()
+    p2.start()
+
+    # Attendi che entrambi i processi terminino
+    p1.join()
+    p2.join()
+
+    print("Entrambi i processi sono terminati")
+
