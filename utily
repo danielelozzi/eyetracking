@@ -1,0 +1,17 @@
+link
+
+https://community.cedrus.com/t/experiment-start-time/5192
+https://www.epochconverter.com/
+
+Usage: SuperLab 4 [-h] [–verbose] [-r] [-q] [–nosplash] [-e <str>] [-g <str>] [-o <str>] [-n <str>]
+-h, --help show this help message
+–verbose generate verbose log messages
+-r, --run run experiment when SuperLab is launched (requires -e)
+-q, --quit quit SuperLab after running experiment (implies -r, requires -e)
+–nosplash don’t show splash screen on startup
+-e, --expfile=<str> experiment to open
+-g, --group=<str> participant group name (implies -r, requires -e)
+-o, --outputfile=<str> collected data file (implies -r, requires -e)
+-n, --name=<str> participant name (implies -r, requires -e)
+If this is fully supported and will continue to be supported, it will definitely be a very useful capability.
+
