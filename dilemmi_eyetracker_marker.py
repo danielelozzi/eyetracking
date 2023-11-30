@@ -655,6 +655,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # update status
             cross_2_tutorial.status = STARTED
             cross_2_tutorial.setAutoDraw(True)
+
+            # send event to eyetracker
+            device.send_event("cross_2_tutorial", event_timestamp_unix_ns=time.time_ns())
         
         # if cross_2_tutorial is active this frame...
         if cross_2_tutorial.status == STARTED:
@@ -688,6 +691,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # update status
             dilemma_2_tutorial.status = STARTED
             dilemma_2_tutorial.setAutoDraw(True)
+
+            # send event to eyetracker
+            device.send_event("dilemma_2_tutorial", event_timestamp_unix_ns=time.time_ns())
         
         # if dilemma_2_tutorial is active this frame...
         if dilemma_2_tutorial.status == STARTED:
@@ -930,7 +936,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 # update status
                 cross_img.status = STARTED
                 cross_img.setAutoDraw(True)
-            
+
+                # send event to eyetracker
+                device.send_event("cross_img", event_timestamp_unix_ns=time.time_ns())
+
+
             # if cross_img is active this frame...
             if cross_img.status == STARTED:
                 # update params
@@ -963,7 +973,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 # update status
                 dilemma_1.status = STARTED
                 dilemma_1.setAutoDraw(True)
-            
+
+                # send event to eyetracker
+                device.send_event("dilemma_1", event_timestamp_unix_ns=time.time_ns())
+
+
             # if dilemma_1 is active this frame...
             if dilemma_1.status == STARTED:
                 # update params
@@ -1013,7 +1027,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 # update status
                 cross_img_2.status = STARTED
                 cross_img_2.setAutoDraw(True)
-            
+
+                # send event to eyetracker
+                device.send_event("cross_img_2", event_timestamp_unix_ns=time.time_ns())
+
+
             # if cross_img_2 is active this frame...
             if cross_img_2.status == STARTED:
                 # update params
@@ -1046,7 +1064,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 # update status
                 dilemma_2.status = STARTED
                 dilemma_2.setAutoDraw(True)
-            
+
+                # send event to eyetracker
+                device.send_event("dilemma_2", event_timestamp_unix_ns=time.time_ns())
+
+
             # if dilemma_2 is active this frame...
             if dilemma_2.status == STARTED:
                 # update params
